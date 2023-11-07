@@ -1,0 +1,29 @@
+input 
+set #2 #1 0         // input number to take factorial of
+set #1 #0 0
+
+jeq #2 #0 0         // skip exit line if false
+exit
+
+j 11
+
+set #3 #0 0                 // set #3 to the multiplyer
+add #3 #2 1
+
+add #1 #2 0                 // Add number to #1 once
+sub #3 #0 1                 // subtract 1 from counter
+printall
+
+jeq #3 #0 1                 // skip jumping back to start if counter reaches zero
+j -6
+
+sub #2 #0 1                 //sutract1 from factorial counter
+printall
+
+jeq #2 #0 1
+j -15
+
+sub #1 #0 1
+sub #1 #0 1
+
+print
